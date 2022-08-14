@@ -25,7 +25,7 @@ export default {
 </script>
 <style>
 .el-header {
-  background-color: #333;
+  background-color: #fff;
 }
 .el-main {
   padding-top: 0;
