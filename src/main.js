@@ -6,9 +6,11 @@ import './assets/css/index.css'
 
 import router from '../router'
 import store from './store'
+import http from 'axios'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
+Vue.prototype.$http = http
 
 new Vue({
   store,

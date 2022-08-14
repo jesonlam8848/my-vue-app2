@@ -53,6 +53,7 @@
   </el-row>
 </template>
 <script>
+import { getMenu } from "../../api/data.js";
 export default {
   name: "home",
   data() {
@@ -141,6 +142,11 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    getMenu().then((res) => {
+      console.log(res);
+    });
   },
 };
 </script>
