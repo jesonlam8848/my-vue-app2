@@ -1,0 +1,69 @@
+.home .user {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.home .user img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+.home .userinfo .name {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.home .userinfo .access {
+  color: #999999;
+}
+.home .login-info p {
+  line-height: 28px;
+  font-size: 14px;
+  color: #999999;
+}
+.home .login-info p span {
+  color: #666666;
+  margin-left: 60px;
+}
+.home .num {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.home .num .el-card {
+  width: 32%;
+  margin-bottom: 20px;
+}
+.home .num .icon {
+  font-size: 30px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  color: #fff;
+}
+.home .num .detail {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .num .detail .num {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.home .num .detail .txt {
+  font-size: 14px;
+  text-align: center;
+  color: #999999;
+}
+.home .graph {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.home .graph .el-card {
+  width: 48%;
+}

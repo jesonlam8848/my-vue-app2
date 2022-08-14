@@ -109,9 +109,9 @@ export default {
     },
     clickMenu(item) {
       this.$router.push({
-        name: item.name
-      })
-    }
+        name: item.name,
+      });
+    },
   },
   computed: {
     noChildren() {
