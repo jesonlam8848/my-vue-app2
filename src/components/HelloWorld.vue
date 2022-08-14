@@ -1,6 +1,11 @@
 <template>
   <div class="hello">
-    <el-button>默认</el-button>
+    <router-link to="/">
+      <el-button>按钮</el-button>
+    </router-link>
+    <router-link to="/user">
+      <el-button type="primary">主要按钮</el-button>
+    </router-link>
   </div>
 </template>
 
