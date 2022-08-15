@@ -98,7 +98,19 @@ export default {
     };
   },
   methods: {
-    confirm() {},
+    confirm() {
+      if (this.operateType === "edit") {
+        this.$http.post("/user/edit", this.operateForm).then((res) => {
+          console.log(res);
+          this.isShow = false;
+        });
+      } else {
+        this.$http.post("/user/add", this.operateForm).then((res) => {
+          console.log(res);
+          this.isShow = false;
+        });
+      }
+    },
     addUser() {
       this.isShow = true;
       this.operateType = "add";
@@ -114,3 +126,10 @@ export default {
   },
 };
 </script>
+<style scoped>
+.manage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</style>
