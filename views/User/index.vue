@@ -1,10 +1,7 @@
 <template>
   <div class="manage">
     <!-- dialog弹窗 -->
-    <el-dialog
-      :title="operateType === 'add' ? '新增用户' : '更新用户'"
-      :visible.sync="isShow"
-    >
+    <el-dialog :title="operateType === 'add' ? '新增用户' : '更新用户'" :visible.sync="isShow">
       <common-form
         :formLabel="opertateFormLabel"
         :form="operateForm"
@@ -122,7 +119,7 @@ export default {
         sex: "",
       };
     },
-    getList() {},
+    getList() {}
   },
 };
 </script>
