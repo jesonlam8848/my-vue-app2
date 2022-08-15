@@ -47,6 +47,8 @@ export default {
     form: Object,
     inline: Boolean,
   },
-  data() {},
+  data() {
+    return {};
+  },
 };
 </script>
