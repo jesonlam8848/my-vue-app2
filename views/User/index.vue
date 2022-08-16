@@ -25,7 +25,9 @@
         :inline="true"
         ref="form"
       >
-        <el-button type="primary" @click="getList">搜索</el-button>
+        <el-button type="primary" @click="getList(searchFrom.keyword)"
+          >搜索</el-button
+        >
       </common-form>
     </div>
     <!-- 下部 -->
@@ -178,13 +180,13 @@ export default {
       }).then(() => {
         const id = row.id;
         this.$http
-          .get("/user/del", {
+          .post("/user/del", {
             params: { id },
           })
           .then(() => {
             this.$message({
               type: "success",
-              message: "删除成功",
+              message: "删除成功~",
             });
             this.getList();
           });
