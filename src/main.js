@@ -12,6 +12,16 @@ import '../api/mock.js'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.prototype.$http = http
+// 导航守卫
+// router.beforeEach((to, from, next) => {
+//   store.commit('getToken')
+//   const token = store.state.user.token
+//   if (!token && to.name !== 'login') {
+//     next({ name: 'login'})
+//   } else {
+//     next()
+//   }
+// })
 
 new Vue({
   store,
