@@ -35,7 +35,7 @@ const routes = [
                 path: '/page2',
                 name: 'page2',
                 component: () => import('../views/other/pageTwo.vue')
-            }
+            },
         ]
     },
     {

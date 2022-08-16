@@ -5,7 +5,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import './assets/css/index.css'
 
 import router from '../router'
-import store from './store'
+import store from '../store'
 import http from 'axios'
 import '../api/mock.js'
 
