@@ -180,7 +180,7 @@ export default {
       }).then(() => {
         const id = row.id;
         this.$http
-          .post("/user/del", {
+          .get("/user/del", {
             params: { id },
           })
           .then(() => {
