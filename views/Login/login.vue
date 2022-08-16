@@ -37,6 +37,7 @@
   </el-form>
 </template>
 <script>
+import Mock from "mockjs";
 export default {
   name: "login",
   data() {
@@ -56,7 +57,12 @@ export default {
     };
   },
   methods: {
-    login() {},
+    login() {
+      // 由于没后端，通过mock模拟随即拿到token
+      const token = Mock.random.guid();
+      this.$store.commit("setToken", token);
+      this.$router.push({ name: "home" });
+    },
   },
 };
 </script>
