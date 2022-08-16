@@ -9,7 +9,7 @@
     @close="handleClose"
     :collapse="isCollapse"
   >
-    <h3>{{ isCollapse ? "后台~" : "通用后台管理系统~" }}</h3>
+    <h3>{{ isCollapse ? "后台" : "super后台管理系统" }}</h3>
     <el-menu-item
       @click="clickMenu(item)"
       v-for="item in noChildren"

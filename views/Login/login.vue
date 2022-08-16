@@ -7,10 +7,18 @@
     label-width="100px"
     class="login-container"
   >
-    <h3 class="login_title">系统登陆</h3>
+    <div class="myGithub">
+      <a href="https://github.com/jesonlam8848/my-vue-app2" target="_blank"
+        ><img title="点击访问" src="../../src/assets/images/github.png" style="vertical-align: middle;"/><span>本项目源码仓库</span></a
+      >
+    </div>
+    <h1 class="login_title">登陆</h1>
+    <h2>~第一个账号功能更完善呦~</h2>
+    <h3>用户名：sudo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：111</h3>
+    <h3 class="admin">用户名：林佳鑫&nbsp;&nbsp;&nbsp;&nbsp;密码：222</h3>
     <el-form-item
       label="用户名"
-      label-width="80px"
+      label-width="65px"
       prop="username"
       class="username"
     >
@@ -21,7 +29,7 @@
         placeholder="请输入账号"
       ></el-input>
     </el-form-item>
-    <el-form-item label="密码" label-width="80px" prop="password">
+    <el-form-item label="密码" label-width="65px" prop="password">
       <el-input
         type="password"
         v-model="form.password"
@@ -90,8 +98,30 @@ export default {
   border: 1px solid #eaeaea;
   box-shadow: 0 0 25px #cac6c6;
 }
+.login-container h2 {
+  color: red;
+  text-align: center;
+}
+.login-container h3 {
+  color: green;
+  text-align: center;
+  margin: 10px auto;
+}
+.login-container a {
+  text-decoration: underline;
+  color: blue;
+}
+.login-container img {
+  width: 20px;
+  margin-right: 5px;
+  /* margin-bottom: 10px; */
+}
+.login-container .myGithub {
+  margin-bottom: 10px;
+  text-align: center;
+}
 .login_title {
-  margin: 0px auto 40px auto;
+  margin: 0px auto 10px auto;
   text-align: center;
   color: #505458;
 }

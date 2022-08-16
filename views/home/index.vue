@@ -8,12 +8,31 @@
           <img :src="userImg" />
           <div class="userinfo">
             <p class="name">Admin</p>
-            <p class="access">超级管理员</p>
+            <p class="access">管理员</p>
           </div>
         </div>
         <div class="login-info">
-          <p>上次登录时间：<span>2021-7-19</span></p>
-          <p>上次登录地点：<span>武汉</span></p>
+          <p>
+            本次登录时间：<span>{{ currentdate }}</span>
+          </p>
+          <p>
+            <a
+              href="https://github.com/jesonlam8848/my-vue-app2"
+              target="_blank"
+              style="
+                text-decoration: underline;
+                text-decoration-color: blue;
+                margin-left: 20px;
+              "
+              ><img
+                style="vertical-align: middle; width: 45px"
+                src="../../src/assets/images/github.png"
+                title="点击访问"
+              /><span style="margin-left: 5px; font-size: 20px; color: blue"
+                >本项目源码仓库</span
+              ></a
+            >
+          </p>
         </div>
       </el-card>
       <!-- 首页左下-->
@@ -78,6 +97,7 @@
 import { getData } from "../../api/data.js";
 // import * as echarts from "echarts";
 import Echart from "../../src/components/ECharts.vue";
+import Mock from "mockjs";
 
 export default {
   name: "home",
@@ -86,6 +106,12 @@ export default {
   },
   data() {
     return {
+      currentdate:
+        new Date().getFullYear() +
+        "-" +
+        (new Date().getMonth() + 1) +
+        "-" +
+        new Date().getDate(),
       userImg: require("../../src/assets/images/user.png"),
       tableData: [],
       tableLabel: {
@@ -97,37 +123,37 @@ export default {
       countData: [
         {
           name: "今日支付订单",
-          value: 1234,
+          value: Mock.Random.float(10, 50, 0, 0),
           icon: "success",
           color: "#2ec7c9",
         },
         {
           name: "今日收藏订单",
-          value: 210,
+          value: Mock.Random.float(10, 50, 0, 0),
           icon: "star-on",
           color: "#ffb980",
         },
         {
           name: "今日未支付订单",
-          value: 1234,
+          value: Mock.Random.float(0, 5, 0, 0),
           icon: "s-goods",
           color: "#5ab1ef",
         },
         {
           name: "本月支付订单",
-          value: 1234,
+          value: Mock.Random.float(300, 500, 0, 0),
           icon: "success",
           color: "#2ec7c9",
         },
         {
           name: "本月收藏订单",
-          value: 210,
+          value: Mock.Random.float(300, 500, 0, 0),
           icon: "star-on",
           color: "#ffb980",
         },
         {
           name: "本月未支付订单",
-          value: 1234,
+          value: Mock.Random.float(10, 20, 0, 0),
           icon: "s-goods",
           color: "#5ab1ef",
         },

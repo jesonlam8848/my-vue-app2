@@ -7,7 +7,7 @@
         icon="el-icon-menu"
         size="mini"
       ></el-button>
-      <h3 style="color: #fff">首页</h3>
+      <h3 style="color: #fff">退登&nbsp;=></h3>
     </div>
     <div class="r-content">
       <el-dropdown trigger="click" size="mini">
@@ -15,8 +15,8 @@
           <img class="user" :src="userImg" />
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item>个人中心</el-dropdown-item>
-          <el-dropdown-item>退出</el-dropdown-item>
+          <!-- <el-dropdown-item>个人中心</el-dropdown-item> -->
+          <el-dropdown-item @click.native="logOut">退出登录</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -34,6 +34,11 @@ export default {
     handleMenu() {
       this.$store.commit("collapseMenu");
     },
+    logOut() {
+      this.$store.commit("clearToken");
+      this.$store.commit("clearMenu");
+      this.$router.push("/login");
+    }
   },
 };
 </script>
@@ -55,5 +60,12 @@ header {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+}
+h3 {
+  position: absolute;
+  right: 20px;
+  width: 100px;
+  /* border: 3px solid #73ad21; */
+  padding: 0px;
 }
 </style>
