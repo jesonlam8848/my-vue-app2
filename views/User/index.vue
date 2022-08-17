@@ -18,17 +18,25 @@
     </el-dialog>
     <!-- 上部 -->
     <div class="manage-header">
-      <el-button type="primary" @click="addUser">+ 新增</el-button>
-      <common-form
-        :formLabel="formLabel"
-        :form="searchFrom"
-        :inline="true"
-        ref="form"
-      >
-        <el-button type="primary" @click="getList(searchFrom.keyword)"
-          >搜索</el-button
-        >
-      </common-form>
+      <el-row gutter="380">
+        <!-- 新增 -->
+        <el-col :span="8" :xs="{ span: 24, offset: 0 }" :sm="{ span: 8, offset: 0 }">
+          <el-button type="success" @click="addUser">+ 新增</el-button>
+        </el-col>
+        <!-- 搜索 -->
+        <el-col :span="16" :xs="{ span: 24, offset: 0 }" :sm="{ span: 16, offset: 0 }">
+          <common-form
+            :formLabel="formLabel"
+            :form="searchFrom"
+            :inline="true"
+            ref="form"
+          >
+            <el-button type="primary" icon="el-icon-search" @click="getList(searchFrom.keyword)"
+              >搜索</el-button
+            >
+          </common-form>
+        </el-col>
+      </el-row>
     </div>
     <!-- 下部 -->
     <common-table

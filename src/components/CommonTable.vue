@@ -6,7 +6,7 @@
         v-for="item in tableLabel"
         :key="item.prop"
         :label="item.label"
-        :width="item.width ? item.width : 125"
+        :width="item.width ? item.width : 70"
       >
         <template slot-scope="scope">
           <span style="margin-left: 10px">{{ scope.row[item.prop] }}</span>
@@ -27,7 +27,7 @@
       :total="config.total"
       :current-page.sync="config.page"
       @current-change="changePage"
-      :page-size="20"
+      :page-size="40"
     ></el-pagination>
   </div>
 </template>
@@ -57,7 +57,7 @@ export default {
 </script>
 <style scoped>
 .common-table {
-  height: calc(100% - 62px);
+  height: calc(100% - 150px);
   background-color: #fff;
   position: relative;
 }

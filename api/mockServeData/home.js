@@ -6,34 +6,35 @@ let List = [];
 // 7天前到今天的年-月-日
 var day1 = new Date();
 day1.setTime(day1.getTime() - 144 * 60 * 60 * 1000);
-var s1 = day1.getFullYear() + "-" + (day1.getMonth() + 1) + "-" + day1.getDate();
+var s1 = (day1.getMonth() + 1) + "-" + day1.getDate();
 
 var day2 = new Date();
 day2.setTime(day2.getTime() - 120 * 60 * 60 * 1000);
-var s2 = day2.getFullYear() + "-" + (day2.getMonth() + 1) + "-" + day2.getDate();
+var s2 = (day2.getMonth() + 1) + "-" + day2.getDate();
 
 var day3 = new Date();
 day3.setTime(day3.getTime() - 96 * 60 * 60 * 1000);
-var s3 = day3.getFullYear() + "-" + (day3.getMonth() + 1) + "-" + day3.getDate();
+var s3 = (day3.getMonth() + 1) + "-" + day3.getDate();
 
 var day4 = new Date();
 day4.setTime(day4.getTime() - 72 * 60 * 60 * 1000);
-var s4 = day4.getFullYear() + "-" + (day4.getMonth() + 1) + "-" + day4.getDate();
+var s4 = (day4.getMonth() + 1) + "-" + day4.getDate();
 
 var day5 = new Date();
 day5.setTime(day5.getTime() - 48 * 60 * 60 * 1000);
-var s5 = day5.getFullYear() + "-" + (day5.getMonth() + 1) + "-" + day5.getDate();
+var s5 = (day5.getMonth() + 1) + "-" + day5.getDate();
 
 var day6 = new Date();
 day6.setTime(day6.getTime() - 24 * 60 * 60 * 1000);
-var s6 = day6.getFullYear() + "-" + (day6.getMonth() + 1) + "-" + day6.getDate();
+var s6 = (day6.getMonth() + 1) + "-" + day6.getDate();
 
 var day7 = new Date();
 day7.setTime(day7.getTime());
-var s7 = day7.getFullYear() + "-" + (day7.getMonth() + 1) + "-" + day7.getDate();
+var s7 = (day7.getMonth() + 1) + "-" + day7.getDate();
 export default {
   getStatisticalData: () => {
     //Mock.Random.float 产生随机数100到8000之间 保留小数 最小0位 最大0位
+    // 折线图
     for (let i = 0; i < 7; i++) {
       List.push(
         Mock.mock({
@@ -79,37 +80,37 @@ export default {
         // 柱状图
         userData: [
           {
-            date: '周一',
+            date: 'Mon',
             new: Mock.Random.float(0, 30, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
-            date: '周二',
+            date: 'Tues',
             new: Mock.Random.float(0, 30, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
-            date: '周三',
+            date: 'Wed',
             new: Mock.Random.float(0, 30, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
-            date: '周四',
+            date: 'Thur',
             new: Mock.Random.float(0, 30, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
-            date: '周五',
+            date: 'Fri',
             new: Mock.Random.float(0, 30, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
-            date: '周六',
+            date: 'Sat',
             new: Mock.Random.float(0, 30, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
-            date: '周日',
+            date: 'Sun',
             new: Mock.Random.float(0, 30, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           }

@@ -71,14 +71,14 @@
   text-align: center;
   color: #999999;
 }
-.home .graph {
+/* .home .graph {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
 .home .graph .el-card {
-  width: 48%;
-}
+  width: 49%;
+} */
 /* reset */
 html,
 body,

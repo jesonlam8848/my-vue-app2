@@ -1,7 +1,7 @@
 <template>
   <el-row class="home" :gutter="20">
     <!-- 首页左侧 -->
-    <el-col :span="8" style="margin-top: 20px" :xs="{ span: 24, offset: 0 }">
+    <el-col :span="11" style="margin-top: 20px" :xs="{ span: 24, offset: 0 }">
       <!-- 首页左上 -->
       <el-card shadow="hover">
         <div class="user">
@@ -49,7 +49,7 @@
       </el-card>
     </el-col>
     <!-- 首页右侧 -->
-    <el-col style="margin-top: 20px" :span="16" :xs="{ span: 24, offset: 0 }">
+    <el-col style="margin-top: 20px" :span="13" :xs="{ span: 24, offset: 0 }">
       <!-- 首页右上 -->
       <div class="num">
         <el-card
@@ -74,22 +74,31 @@
         <echart :chartData="echartData.order" style="height: 280px" />
       </el-card>
       <!-- 柱状图和饼状图 -->
-      <div class="graph">
-        <!-- 柱状图 -->
-        <el-card style="height: 260px">
-          <!-- <div style="height: 240px" ref="userEcharts"></div> -->
-          <echart :chartData="echartData.user" style="height: 240px" />
-        </el-card>
-        <!-- 饼状图 -->
-        <el-card style="height: 260px">
-          <!-- <div style="height: 240px" ref="videoEcharts"></div> -->
-          <echart
-            :chartData="echartData.video"
-            :isAxisChart="false"
-            style="height: 240px"
-          />
-        </el-card>
-      </div>
+      <!-- <el-row :gutter="0"> -->
+      <!-- <div class="graph"> -->
+      <!-- 柱状图 -->
+      <el-row :gutter="0">
+        <el-col :span="12" class="userEcharts" :xs="{ span: 24, offset: 0 }">
+          <el-card style="height: 260px">
+            <!-- <div style="height: 240px" ref="userEcharts"></div> -->
+            <echart :chartData="echartData.user" style="height: 240px" />
+          </el-card>
+        </el-col>
+
+        <el-col :span="12" class="video" :xs="{ span: 24, offset: 0 }">
+          <!-- 饼状图 -->
+          <el-card style="height: 260px">
+            <!-- <div style="height: 240px" ref="videoEcharts"></div> -->
+            <echart
+              :chartData="echartData.video"
+              :isAxisChart="false"
+              style="height: 240px"
+            />
+          </el-card>
+        </el-col>
+      </el-row>
+      <!-- </div> -->
+      <!-- </el-row> -->
     </el-col>
   </el-row>
 </template>
@@ -115,10 +124,10 @@ export default {
       userImg: require("../../src/assets/images/user.png"),
       tableData: [],
       tableLabel: {
-        name: "课程",
-        todayBuy: "今日购买",
-        monthBuy: "本月购买",
-        totalBuy: "总共购买",
+        name: "品牌",
+        todayBuy: "今日订单",
+        monthBuy: "月订",
+        totalBuy: "总购",
       },
       countData: [
         {
@@ -310,7 +319,7 @@ export default {
 };
 </script>
 <!-- 自定义了样式 -->
-<style>
+<style scoped>
 .home .num .icon {
   width: 35px;
 }
