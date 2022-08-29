@@ -7,12 +7,16 @@
     label-width="100px"
     class="login-container"
   >
+    <div class="title">疫情监控系统</div>
     <div class="myGithub">
       <a href="https://github.com/jesonlam8848/my-vue-app2" target="_blank"
-        ><img title="点击访问" src="../../src/assets/images/github.png" style="vertical-align: middle;"/><span>本项目源码仓库</span></a
+        ><img
+          title="点击访问"
+          src="../../src/assets/images/github.png"
+          style="vertical-align: middle"
+        /><span>本项目源码仓库</span></a
       >
     </div>
-    <h1 class="login_title">登陆</h1>
     <h2>~第一个账号功能更完善呦~</h2>
     <h3>用户名：sudo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：111</h3>
     <h3 class="admin">用户名：林佳鑫&nbsp;&nbsp;&nbsp;&nbsp;密码：222</h3>
@@ -88,6 +92,12 @@ export default {
 };
 </script>
 <style scoped>
+.title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 25px;
+  color: blueviolet;
+}
 .login-container {
   border-radius: 15px;
   background-clip: padding-box;
@@ -119,11 +129,6 @@ export default {
 .login-container .myGithub {
   margin-bottom: 10px;
   text-align: center;
-}
-.login_title {
-  margin: 0px auto 10px auto;
-  text-align: center;
-  color: #505458;
 }
 .login_submit {
   margin: 10px auto 0px auto;
