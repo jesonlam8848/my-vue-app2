@@ -7,8 +7,8 @@
         <div class="user">
           <img :src="userImg" />
           <div class="userinfo">
-            <p class="name">Admin</p>
-            <p class="access">管理员</p>
+            <p class="name">{{ register }}</p>
+            <p class="access">登陆者</p>
           </div>
         </div>
         <div class="login-info">
@@ -115,6 +115,7 @@ export default {
   },
   data() {
     return {
+      register: Mock.Random.float(1000,2000,0,0)+'号',
       currentdate:
         new Date().getFullYear() +
         "-" +
@@ -124,47 +125,47 @@ export default {
       userImg: require("../../src/assets/images/user.png"),
       tableData: [],
       tableLabel: {
-        name: "品牌",
-        todayBuy: "今日订单",
-        monthBuy: "月订",
-        totalBuy: "总购",
+        name: "疫苗品牌",
+        todayBuy: "第一针",
+        monthBuy: "第二针",
+        totalBuy: "第三针",
       },
       countData: [
         {
-          name: "今日支付订单",
-          value: Mock.Random.float(10, 50, 0, 0),
-          icon: "success",
-          color: "#2ec7c9",
+          name: "现确诊",
+          value: Mock.Random.float(2000, 2500, 0, 0),
+          icon: "circle-check",
+          color: "#ff9900",
         },
         {
-          name: "今日收藏订单",
-          value: Mock.Random.float(10, 50, 0, 0),
+          name: "现存疑似",
+          value: Mock.Random.float(4000, 5000, 0, 0),
+          icon: "first-aid-kit",
+          color: "#ffcc99",
+        },
+        {
+          name: "现存重症",
+          value: Mock.Random.float(700, 1000, 0, 0),
           icon: "star-on",
-          color: "#ffb980",
+          color: "#996600",
         },
         {
-          name: "今日未支付订单",
-          value: Mock.Random.float(0, 5, 0, 0),
-          icon: "s-goods",
-          color: "#5ab1ef",
-        },
-        {
-          name: "本月支付订单",
-          value: Mock.Random.float(300, 500, 0, 0),
+          name: "累计确诊",
+          value: Mock.Random.float(80000, 100000, 0, 0),
           icon: "success",
-          color: "#2ec7c9",
+          color: "#cc0000",
         },
         {
-          name: "本月收藏订单",
-          value: Mock.Random.float(300, 500, 0, 0),
-          icon: "star-on",
-          color: "#ffb980",
+          name: "累计死亡",
+          value: Mock.Random.float(4000, 6000, 0, 0),
+          icon: "user",
+          color: "#666666",
         },
         {
-          name: "本月未支付订单",
-          value: Mock.Random.float(10, 20, 0, 0),
-          icon: "s-goods",
-          color: "#5ab1ef",
+          name: "累计治愈",
+          value: Mock.Random.float(80000, 100000, 0, 0),
+          icon: "user-solid",
+          color: "#3399cc",
         },
       ],
       echartData: {
@@ -270,12 +271,12 @@ export default {
         this.echartData.user.xData = data.userData.map((item) => item.date);
         this.echartData.user.series = [
           {
-            name: "新增用户",
+            name: "康复患者",
             data: data.userData.map((item) => item.new),
             type: "bar",
           },
           {
-            name: "活跃用户",
+            name: "新增患者",
             data: data.userData.map((item) => item.active),
             type: "bar",
           },

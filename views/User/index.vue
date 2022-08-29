@@ -2,7 +2,7 @@
   <div class="manage">
     <!-- dialog弹窗 -->
     <el-dialog
-      :title="operateType === 'add' ? '新增用户' : '更新用户'"
+      :title="operateType === 'add' ? '新增患者' : '更新患者'"
       :visible.sync="isShow"
     >
       <common-form
@@ -38,6 +38,7 @@
         </el-col>
       </el-row>
     </div>
+
     <!-- 下部 -->
     <common-table
       :tableData="tableData"
@@ -227,5 +228,6 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 20px;
 }
 </style>
