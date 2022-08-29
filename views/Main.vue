@@ -29,7 +29,7 @@ export default {
 </script>
 <style>
 .el-header {
-  background-color: #333;
+  background-color: #00B2EE;
 }
 .el-main {
   padding-top: 0;
