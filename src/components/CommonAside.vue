@@ -2,14 +2,14 @@
   <el-menu
     default-active="1-4-1"
     class="el-menu-vertical-demo"
-    background-color="#545c64"
+    background-color="#00B2EE"
     text-color="#fff"
-    active-text-color="#ffd04b"
+    active-text-color="#104E8B"
     @open="handleOpen"
     @close="handleClose"
     :collapse="isCollapse"
   >
-    <h3>{{ isCollapse ? "后台" : "JesonLam后台管理系统" }}</h3>
+    <h3>{{ isCollapse ? "监控" : "疫情监控系统" }}</h3>
     <el-menu-item
       @click="clickMenu(item)"
       v-for="item in noChildren"
