@@ -38,12 +38,12 @@ export default {
     for (let i = 0; i < 7; i++) {
       List.push(
         Mock.mock({
-          苹果: Mock.Random.float(100, 8000, 0, 0),
-          vivo: Mock.Random.float(100, 5000, 0, 0),
-          oppo: Mock.Random.float(100, 5000, 0, 0),
-          魅族: Mock.Random.float(100, 8000, 0, 0),
-          三星: Mock.Random.float(100, 8000, 0, 0),
-          小米: Mock.Random.float(100, 10000, 0, 0)
+          密切接触者: Mock.Random.float(1000, 2000, 0, 0),
+          次密切接触者: Mock.Random.float(3000, 3500, 0, 0),
+          封控区: Mock.Random.float(1000, 2000, 0, 0),
+          管控区: Mock.Random.float(2000, 3000, 0, 0),
+          隔离区: Mock.Random.float(1000, 2000, 0, 0),
+          防范区: Mock.Random.float(1000, 2000, 0, 0)
         })
       )
     }
@@ -53,65 +53,65 @@ export default {
         // 饼图
         videoData: [
           {
-            name: '小米',
-            value: Mock.Random.float(100, 8000, 0, 0),
+            name: '华北',
+            value: Mock.Random.float(25000, 30000, 0, 0),
           },
           {
-            name: '苹果',
-            value: Mock.Random.float(100, 8000, 0, 0),
+            name: '华南',
+            value: Mock.Random.float(25000, 30000, 0, 0),
           },
           {
-            name: 'vivo',
-            value: Mock.Random.float(100, 8000, 0, 0),
+            name: '华西',
+            value: Mock.Random.float(8000, 10000, 0, 0),
           },
           {
-            name: 'oppo',
-            value: Mock.Random.float(100, 8000, 0, 0),
+            name: '华东',
+            value: Mock.Random.float(25000, 30000, 0, 0),
           },
           {
-            name: '魅族',
-            value: Mock.Random.float(100, 8000, 0, 0),
+            name: '港澳',
+            value: Mock.Random.float(6000, 8000, 0, 0),
           },
           {
-            name: '三星',
-            value: Mock.Random.float(100, 8000, 0, 0),
+            name: '台湾',
+            value: Mock.Random.float(6000, 8000, 0, 0),
           }
         ],
         // 柱状图
         userData: [
           {
             date: 'Mon',
-            new: Mock.Random.float(0, 30, 0, 0),
+            new: Mock.Random.float(150, 200, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
             date: 'Tues',
-            new: Mock.Random.float(0, 30, 0, 0),
+            new: Mock.Random.float(150, 200, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
             date: 'Wed',
-            new: Mock.Random.float(0, 30, 0, 0),
+            new: Mock.Random.float(150, 200, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
             date: 'Thur',
-            new: Mock.Random.float(0, 30, 0, 0),
+            new: Mock.Random.float(150, 200, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
             date: 'Fri',
-            new: Mock.Random.float(0, 30, 0, 0),
+            new: Mock.Random.float(150, 200, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
             date: 'Sat',
-            new: Mock.Random.float(0, 30, 0, 0),
+            new: Mock.Random.float(150, 200, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           },
           {
             date: 'Sun',
-            new: Mock.Random.float(0, 30, 0, 0),
+            new: Mock.Random.float(150, 200, 0, 0),
             active: Mock.Random.float(50, 80, 0, 0)
           }
         ],
@@ -122,37 +122,37 @@ export default {
         },
         tableData: [
           {
-            name: 'oppo',
+            name: '国药中生',
             todayBuy: Mock.Random.float(0,50,0,0),
             monthBuy: Mock.Random.float(500,1000,0,0),
             totalBuy: Mock.Random.float(2000,3000,0,0)
           },
           {
-            name: 'vivo',
+            name: '北京科兴',
             todayBuy: Mock.Random.float(0,50,0,0),
             monthBuy: Mock.Random.float(500,1000,0,0),
             totalBuy: Mock.Random.float(2000,3000,0,0)
           },
           {
-            name: '苹果',
+            name: '智飞生物',
             todayBuy: Mock.Random.float(0,50,0,0),
             monthBuy: Mock.Random.float(500,1000,0,0),
             totalBuy: Mock.Random.float(2000,3000,0,0)
           },
           {
-            name: '小米',
+            name: '康希诺',
             todayBuy: Mock.Random.float(0,50,0,0),
             monthBuy: Mock.Random.float(500,1000,0,0),
             totalBuy: Mock.Random.float(2000,3000,0,0)
           },
           {
-            name: '三星',
+            name: '深圳康泰',
             todayBuy: Mock.Random.float(0,50,0,0),
             monthBuy: Mock.Random.float(500,1000,0,0),
             totalBuy: Mock.Random.float(2000,3000,0,0)
           },
           {
-            name: '魅族',
+            name: '辉瑞',
             todayBuy: Mock.Random.float(0,50,0,0),
             monthBuy: Mock.Random.float(500,1000,0,0),
             totalBuy: Mock.Random.float(2000,3000,0,0)
