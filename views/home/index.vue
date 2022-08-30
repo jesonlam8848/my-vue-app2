@@ -63,7 +63,7 @@
             :style="{ background: item.color }"
           ></i>
           <div class="detail">
-            <p class="num">￥{{ item.value }}</p>
+            <p class="num">{{ item.value }}</p>
             <p class="txt">{{ item.name }}</p>
           </div>
         </el-card>

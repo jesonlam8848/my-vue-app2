@@ -1,52 +1,52 @@
 <template>
-  <el-form
-    :model="form"
-    status-icon
-    :rules="rules"
-    ref="form"
-    label-width="100px"
-    class="login-container"
-  >
-    <div class="title">疫情监控系统</div>
-    <div class="myGithub">
-      <a href="https://github.com/jesonlam8848/my-vue-app2" target="_blank"
-        ><img
-          title="点击访问"
-          src="../../src/assets/images/github.png"
-          style="vertical-align: middle"
-        /><span>本项目源码仓库</span></a
-      >
-    </div>
-    <h2>~第一个账号功能更完善呦~</h2>
-    <h3>用户名：sudo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：111</h3>
-    <h3 class="admin">用户名：林佳鑫&nbsp;&nbsp;&nbsp;&nbsp;密码：222</h3>
-    <el-form-item
-      label="用户名"
-      label-width="65px"
-      prop="username"
-      class="username"
+    <el-form
+      :model="form"
+      status-icon
+      :rules="rules"
+      ref="form"
+      label-width="100px"
+      class="login-container"
     >
-      <el-input
-        type="input"
-        v-model="form.username"
-        autocomplete="off"
-        placeholder="请输入账号"
-      ></el-input>
-    </el-form-item>
-    <el-form-item label="密码" label-width="65px" prop="password">
-      <el-input
-        type="password"
-        v-model="form.password"
-        autocomplete="off"
-        placeholder="请输入密码"
-      ></el-input>
-    </el-form-item>
-    <el-form-item class="login_submit">
-      <el-button type="primary" @click="login" class="login_submit"
-        >登录</el-button
+      <div class="title">疫情监控系统</div>
+      <div class="myGithub">
+        <a href="https://github.com/jesonlam8848/my-vue-app2" target="_blank"
+          ><img
+            title="点击访问"
+            src="../../src/assets/images/github.png"
+            style="vertical-align: middle"
+          /><span>本项目源码仓库</span></a
+        >
+      </div>
+      <h2>~第一个账号功能更完善呦~</h2>
+      <h3>用户名：sudo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：111</h3>
+      <h3 class="admin">用户名：林佳鑫&nbsp;&nbsp;&nbsp;&nbsp;密码：222</h3>
+      <el-form-item
+        label="用户名"
+        label-width="65px"
+        prop="username"
+        class="username"
       >
-    </el-form-item>
-  </el-form>
+        <el-input
+          type="input"
+          v-model="form.username"
+          autocomplete="off"
+          placeholder="请输入账号"
+        ></el-input>
+      </el-form-item>
+      <el-form-item label="密码" label-width="65px" prop="password">
+        <el-input
+          type="password"
+          v-model="form.password"
+          autocomplete="off"
+          placeholder="请输入密码"
+        ></el-input>
+      </el-form-item>
+      <el-form-item class="login_submit">
+        <el-button type="primary" @click="login" class="login_submit"
+          >登录</el-button
+        >
+      </el-form-item>
+    </el-form>
 </template>
 <script>
 // import Mock from "mockjs";
