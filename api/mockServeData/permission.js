@@ -26,7 +26,7 @@ export default {
             {
               path: '/user',
               name: 'user',
-              label: '用户管理',
+              label: '人员管理',
               icon: 'user',
               url: 'User/index'
             },
