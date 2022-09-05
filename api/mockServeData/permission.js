@@ -55,7 +55,7 @@ export default {
           message: '获取成功'
         }
       }
-    } else if (username === '林佳鑫' && password === '222') {
+    } else if (username === 'admin' && password === '222') {
       return {
         code: 20000,
         data: {
