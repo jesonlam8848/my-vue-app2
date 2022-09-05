@@ -15,7 +15,7 @@
           <p>
             本次登录时间：<span>{{ currentdate }}</span>
           </p>
-          <p>
+          <!-- <p>
             <a
               href="https://github.com/jesonlam8848/my-vue-app2"
               target="_blank"
@@ -32,7 +32,7 @@
                 >本项目源码仓库</span
               ></a
             >
-          </p>
+          </p> -->
         </div>
       </el-card>
       <!-- 首页左下-->
