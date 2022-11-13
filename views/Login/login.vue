@@ -17,7 +17,7 @@
         /><span>本项目源码仓库</span></a
       >
     </div> -->
-    <h2>~第一个账号功能更完善呦~</h2>
+    <!-- <h2>~第一个账号功能更完善呦~</h2> -->
     <h3>用户名：sudo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：111</h3>
     <h3 class="admin">用户名：admin&nbsp;&nbsp;&nbsp;&nbsp;密码：222</h3>
     <el-form-item
