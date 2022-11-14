@@ -74,7 +74,7 @@ export default {
             const option = {
               // 标题
               title: {
-                text:"中国地图地区新增",
+                text:"中国地区新增",
                 left: 'center',
                 subtext: "下载链接",
                 sublink: "http://datav.aliyun.com/tools/atlas/#&lat=30.772340792178525&lng=103.94573258937584&zoom=9.5"
