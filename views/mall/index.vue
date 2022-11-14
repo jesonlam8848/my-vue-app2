@@ -16,25 +16,38 @@ export default {
     return {
       timer: null,
       seriesData: [
-        {name: '天津市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '北京市', value: 15477.48},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '上海市', value: Mock.Random.float(1000,2000,0,0)},
-        {name: '河北省', value: 6992.6},
-        {name: '山东省', value: 44045.49},
-        {name: '山西省', value: 4045.49},
-        {name: '广东省', value: 4045.49},
+        {name: '广东省', value: Mock.Random.float(500,1000,0,0)},
+        {name: '北京市', value: Mock.Random.float(500,1000,0,0)},
+        {name: '河南省', value: Mock.Random.float(500,1000,0,0)},
+        {name: '重庆市', value: Mock.Random.float(500,1000,0,0)},
+        {name: '台湾省', value: Mock.Random.float(500,1000,0,0)},
+        {name: '四川省', value: Mock.Random.float(200,400,0,0)},
+        {name: '内蒙古自治区', value: Mock.Random.float(200,400,0,0)},
+        {name: '云南省', value: Mock.Random.float(200,400,0,0)},
+        {name: '浙江省', value: Mock.Random.float(200,400,0,0)},
+        {name: '山西省', value: Mock.Random.float(200,400,0,0)},
+        {name: '福建省', value: Mock.Random.float(200,400,0,0)},
+        {name: '新疆维吾尔自治区', value: Mock.Random.float(100,200,0,0)},
+        {name: '青海省', value: Mock.Random.float(100,200,0,0)},
+        {name: '西藏自治区', value: Mock.Random.float(100,200,0,0)},
+        {name: '甘肃省', value: Mock.Random.float(100,200,0,0)},
+        {name: '陕西省', value: Mock.Random.float(100,200,0,0)},
+        {name: '湖北省', value: Mock.Random.float(100,200,0,0)},
+        {name: '贵州省', value: Mock.Random.float(100,200,0,0)},
+        {name: '湖南省', value: Mock.Random.float(100,200,0,0)},
+        {name: '湖南省', value: Mock.Random.float(100,200,0,0)},
+        {name: '安徽省', value: Mock.Random.float(100,200,0,0)},
+        {name: '山东省', value: Mock.Random.float(100,200,0,0)},
+        {name: '河北省', value: Mock.Random.float(100,200,0,0)},
+        {name: '天津市', value: Mock.Random.float(100,200,0,0)},
+        {name: '辽宁省', value: Mock.Random.float(100,200,0,0)},
+        {name: '黑龙江省', value: Mock.Random.float(100,200,0,0)},
+        {name: '海南省', value: Mock.Random.float(100,200,0,0)},
+        {name: '宁夏回族自治区', value: Mock.Random.float(0,50,0,0)},
+        {name: '广西壮族自治区', value: Mock.Random.float(0,50,0,0)},
+        {name: '江西省', value: Mock.Random.float(0,50,0,0)},
+        {name: '吉林省', value: Mock.Random.float(0,50,0,0)},
+        
       ],
       map: null
     }
@@ -61,7 +74,7 @@ export default {
             const option = {
               // 标题
               title: {
-                text:"中国地图",
+                text:"中国地图地区新增",
                 left: 'center',
                 subtext: "下载链接",
                 sublink: "http://datav.aliyun.com/tools/atlas/#&lat=30.772340792178525&lng=103.94573258937584&zoom=9.5"
@@ -76,8 +89,8 @@ export default {
               },
               // 图例
               visualMap: {
-                min: 800,
-                max: 50000,
+                min: 0,
+                max: 1000,
                 text: ['High', 'Low'],
                 realtime: false,
                 calculable: true,
@@ -93,10 +106,10 @@ export default {
                   // 这是要显示的数据
                   data: this.seriesData,
                   // 自定义命名映射，不设置的话，label默认是使用 geoJson中的name名
-                  nameMap: {
-                    '北京市': "北京重命名",
-                    "天津市": '天津重命名'
-                  },
+                  // nameMap: {
+                  //   '北京市': "北京重命名",
+                  //   "天津市": '天津重命名'
+                  // },
                 },
                 
               ]
