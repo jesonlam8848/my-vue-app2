@@ -16,13 +16,13 @@ export default {
               icon: 's-home',
               url: 'home/index'
             },
-            // {
-            //   path: '/mall',
-            //   name: 'mall',
-            //   label: '商品管理',
-            //   icon: 'video-play',
-            //   url: 'mall/index'
-            // },
+            {
+              path: '/mall',
+              name: 'mall',
+              label: '地图',
+              icon: 'video-play',
+              url: 'mall/index'
+            },
             {
               path: '/user',
               name: 'user',
@@ -67,10 +67,17 @@ export default {
               icon: 's-home',
               url: 'home/index'
             },
+            {
+              path: '/mall',
+              name: 'mall',
+              label: '地图',
+              icon: 'video-play',
+              url: 'mall/index'
+            },
             // {
             //   path: '/video',
             //   name: 'video',
-            //   label: '商品管理',
+            //   label: '',
             //   icon: 'video-play',
             //   url: 'mall/index'
             // }
