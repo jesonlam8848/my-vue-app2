@@ -27,6 +27,11 @@ const routes = [
                 component: () => import('../views/mall')
             },
             {
+                path: '/webgl',
+                name: 'webgl',
+                component: () => import('../views/webgl')
+            },
+            {
                 path: '/page1',
                 name: 'page1',
                 component: () => import('../views/other/pageOne.vue')

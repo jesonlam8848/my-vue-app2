@@ -24,6 +24,13 @@ export default {
               url: 'mall/index'
             },
             {
+              path: '/webgl',
+              name: 'webgl',
+              label: '3D',
+              icon: 'map-location',
+              url: 'webgl/index'
+            },
+            {
               path: '/user',
               name: 'user',
               label: '人员管理',
@@ -73,6 +80,13 @@ export default {
               label: '地图',
               icon: 'video-play',
               url: 'mall/index'
+            },
+            {
+              path: '/webgl',
+              name: 'webgl',
+              label: '3D',
+              icon: 'map-location',
+              url: 'webgl/index'
             },
             // {
             //   path: '/video',
