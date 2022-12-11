@@ -33,5 +33,6 @@ export default {
 }
 .el-main {
   padding-top: 0;
+  padding-left: 0;
 }
 </style>

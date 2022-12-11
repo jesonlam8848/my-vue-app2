@@ -14,6 +14,10 @@
     "element-ui": "^2.15.9",
     "js-cookie": "3.0.1",
     "mockjs": "1.1.0",
+    "three": "^0.147.0",
+    "three-css2drender": "^1.0.0",
+    "three-obj-mtl-loader": "^1.0.3",
+    "three-orbit-controls": "^82.1.0",
     "vue": "^2.6.11",
     "vue-router": "3.5.3",
     "vuex": "3.6.2"
