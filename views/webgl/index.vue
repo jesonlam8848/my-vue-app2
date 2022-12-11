@@ -11,6 +11,7 @@
 
 <script>
 import * as THREE from "three";
+import { gsap } from "gsap";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const lon2xyz = (R, longitude, latitude) => {
@@ -184,16 +185,16 @@ export default {
 
       lightPillar.add(circleMesh);
 
-      // gsap.to(circleMesh.scale, {
-      //   duration: 1 + Math.random() * 0.5,
-      //   x: 2,
-      //   y: 2,
-      //   z: 2,
-      //   repeat: -1,
-      //   delay: Math.random() * 0.5,
-      //   yoyo: true,
-      //   ease: "power2.inOut",
-      // });
+      gsap.to(circleMesh.scale, {
+        duration: 1 + Math.random() * 0.5,
+        x: 2,
+        y: 2,
+        z: 2,
+        repeat: -1,
+        delay: Math.random() * 0.5,
+        yoyo: true,
+        ease: "power2.inOut",
+      });
 
       // 设置光柱的位置
 
@@ -244,17 +245,17 @@ export default {
     let time = {
       value: 0,
     };
-    // gsap.to(time, {
-    //   value: 1,
-    //   duration: 10,
-    //   repeat: -1,
-    //   ease: "linear",
-    //   onUpdate: () => {
-    //     moon.position.x = 150 * Math.cos(time.value * Math.PI * 2);
-    //     moon.position.z = 150 * Math.sin(time.value * Math.PI * 2);
-    //     moon.rotation.y = time.value * Math.PI * 8;
-    //   },
-    // });
+    gsap.to(time, {
+      value: 1,
+      duration: 10,
+      repeat: -1,
+      ease: "linear",
+      onUpdate: () => {
+        moon.position.x = 150 * Math.cos(time.value * Math.PI * 2);
+        moon.position.z = 150 * Math.sin(time.value * Math.PI * 2);
+        moon.rotation.y = time.value * Math.PI * 8;
+      },
+    });
 
     function render() {
       controls.update();
